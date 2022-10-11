@@ -1,0 +1,46 @@
+(base) Leahs-Air:Documents leahjoneskirwin$ cd ~/Desktop
+(base) Leahs-Air:Desktop leahjoneskirwin$ ls
+ .png
+AgenaRisk
+Critically evaluate the evidence for environmental, psychological and biological factors contributing to the development of different personality disorders.docx
+Desktop – Leah’s MacBook Air
+Hello.java
+Neuropsychology - narrated slideshow.ppsx
+Photo on 10-04-2018 at 21.52.jpg
+Photo on 15-06-2020 at 21.42.jpg
+Screen Shot 2018-01-10 at 00.44.37.png
+Screen Shot 2018-02-01 at 20.18.30.png
+Screen Shot 2018-02-15 at 19.42.24.png
+Screen Shot 2018-02-27 at 01.21.32.png
+Screen Shot 2018-03-13 at 23.27.21.png
+Screen Shot 2018-03-27 at 11.24.46.png
+Screen Shot 2018-03-27 at 12.22.17.png
+Screenshot 2020-10-15 at 13.38.16.png
+Screenshot 2021-01-05 at 15.27.51.png
+~$itically evaluate the evidence for environmental, psychological and biological factors contributing to the development of different personality disorders.docx
+(base) Leahs-Air:Desktop leahjoneskirwin$ Hello.java
+-bash: Hello.java: command not found
+(base) Leahs-Air:Desktop leahjoneskirwin$ ls
+ .png
+AgenaRisk
+Critically evaluate the evidence for environmental, psychological and biological factors contributing to the development of different personality disorders.docx
+Desktop – Leah’s MacBook Air
+Hello.java
+Neuropsychology - narrated slideshow.ppsx
+Photo on 10-04-2018 at 21.52.jpg
+Photo on 15-06-2020 at 21.42.jpg
+Screen Shot 2018-01-10 at 00.44.37.png
+Screen Shot 2018-02-01 at 20.18.30.png
+Screen Shot 2018-02-15 at 19.42.24.png
+Screen Shot 2018-02-27 at 01.21.32.png
+Screen Shot 2018-03-13 at 23.27.21.png
+Screen Shot 2018-03-27 at 11.24.46.png
+Screen Shot 2018-03-27 at 12.22.17.png
+Screenshot 2020-10-15 at 13.38.16.png
+Screenshot 2021-01-05 at 15.27.51.png
+~$itically evaluate the evidence for environmental, psychological and biological factors contributing to the development of different personality disorders.docx
+(base) Leahs-Air:Desktop leahjoneskirwin$ javac Hello.java
+(base) Leahs-Air:Desktop leahjoneskirwin$ 
+(base) Leahs-Air:Desktop leahjoneskirwin$ java Hello
+Hello, World!
+(base) Leahs-Air:Desktop leahjoneskirwin$ 
