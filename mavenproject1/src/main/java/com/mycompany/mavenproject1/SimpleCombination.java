@@ -17,7 +17,7 @@ int sal = secondHalf.length;   //determines length of secondArray
 int[] result = new int[fal + sal];  //resultant array of size first array and second array  
 System.arraycopy(firstHalf, 0, result, 0, fal);  
 System.arraycopy(secondHalf, 0, result, fal, sal);  
-System.out.println(Arrays.toString(result));    //prints the resultant array  
+System.out.println("All together now!:" + Arrays.toString(result));    //prints the resultant array  
 System.out.println("New array length: " + result.length);
 }  
 }  
