@@ -3,76 +3,109 @@ package com.mycompany.basicprogrammingconcepts;
 *
 * @author leahjoneskirwin
 */
-
-
-
 import java.util.Random;
 import java.util.Scanner;
 
-
-
 public class RockPaperScissors {
+    
     public static void main(String[] args) {
+        
+        int numPlays;
+        String player;
+        String computer;
+    
+        // Counters//   
+        int playerW = 0;
+        int computerW = 0;
+        int ties = 0;
+    
+        //Scanner + random classes
         Scanner scanner = new Scanner(System.in);
-
-
-
-       System.out.println("Welcome to Rock-Paper-Scissors! How many rounds would you like to play?");
-        int rounds = Integer.parseInt(scanner.nextLine());
-
-
-
-       for (int i = 0; i < rounds; i++) {
-            playRockPaperScissors(scanner);
-        } // Need to make this max 10
-    }
-
-
-
-   static void playRockPaperScissors(Scanner scanner) {
-        // Getting input from the user
-        System.out.println("Lets play! (rock/paper/scissors)");
-        String playerMove = scanner.nextLine();
-
-
-
-       // Getting input from the computer
-        Random random = new Random();
-        int randomNumber = random.nextInt(3);
-
-
-
-       String computerMove;
-        if (randomNumber == 0) {
-            computerMove = "rock";
-        } else if (randomNumber == 1) {
-            computerMove = "paper";
-        } else {
-            computerMove = "scissors";
+        Random rnd = new Random();
+    
+        // Array of possible options
+        String[] options = {"Rock", "Paper", "Scissors"};
+        int randomIndex = rnd.nextInt(options.length);
+        computer = options[randomIndex];
+    
+    
+        System.out.println("Welcome to Rock-Paper-Scissors! How many rounds would you like to play?");
+    
+        numPlays = scanner.nextInt();
+    
+        if (numPlays < 1 || numPlays > 10) {
+            System.out.println("Error!");
         }
-        System.out.println("Computer chose " + computerMove + "!");
+    
+        int i = 0;
+        while (numPlays >= 1 && numPlays <= 10 && i < numPlays) {
+    
+            System.out.println("Please enter Rock/Paper/Scissors");
+            player = scanner.next();
+    
+            if (player.equals(computer)){
+                System.out.println("TIE");
+                ties++;
+                
+            } else if (player.equals("Rock") && computer.equals("Paper")){
+                System.out.println("COMPUTER WINS");
+                computerW++;
+        
+            } else if (player.equals("Paper") && computer.equals("Rock")){
+                System.out.println("YOU WIN +1 POINT");
+                playerW++;        
+        
+            } else if (player.equals("Rock") && computer.equals("Scissors")){
+                System.out.println("YOU WIN +1 POINT");
+                playerW++;        
 
-
-
-       // Print results
-        if (playerMove.equals(computerMove)) {
-            System.out.println("It's a draw!");
-        } else if (playerWins(playerMove, computerMove)) {
-            System.out.println("Player wins!");
-        } else {
-            System.out.println("Computer wins!");
+            } else if (player.equals("Scissors") && computer.equals("Paper")){
+                System.out.println("YOU WIN +1 POINT");
+                playerW++;          
+        
+            } else if (player.equals("Scissors") && computer.equals("Rock")){
+                System.out.println("COMPUTER WINS");
+                computerW++;  
+        
+            } else if (player.equals("Paper") && computer.equals("Scissors")){
+                System.out.println("COMPUTER WINS");
+                computerW++;   
+        
+            }    
+              
+            i++; 
+    
+        }   
+    
+        System.out.println("I won" + " " + computerW + " " + "times");
+        System.out.println("You won" + " " + playerW + " " + "times");
+        System.out.println("Its a draw!" + " " + ties + " " + "times");
+    
+        Winner(playerW, computerW);
+    
         }
-    }
+    
+    
+        public static void Winner(int playerW, int computerW){
+            if(playerW > computerW){
+                System.out.println("WELL DONE! YOU WIN");
+            } else if(computerW > playerW){
+                System.out.println("OH NO! YOU LOST");
+            } else {
+                System.out.println("NEITHER OF US WON... PLAY AGAIN? \\\"Yes\\\" or \\\"No\\\"\"");
+                Scanner YN = new Scanner(System.in);
 
-
-
-   static boolean playerWins(String playerMove, String computerMove) {
-        if (playerMove.equals("rock")) {
-            return computerMove.equals("scissors");
-        } else if (playerMove.equals("paper")) {
-            return computerMove.equals("rock");
-        } else {
-            return computerMove.equals("paper");
+            String YN_String = YN.next();   // Need to get this to work.
+            if(YN_String.equals("Yes") || YN_String.equals("yes")){
+            }
+            if(YN_String.equals("No") || YN_String.equals("no")) {
+                System.out.println ("Goodbye!");
+                break;
+            }
+                          
+                
         }
+        
     }
-} // Need to make variables which can be incremented to count wins etc
+    
+}
